@@ -1,0 +1,218 @@
+@import url("../css/dfs.css");
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 114px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__logo {
+  margin: 0px 20px 0px 0px;
+}
+.header__menu {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.header__button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 252px;
+          flex: 0 0 252px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.menu__item {
+  margin: 0px 40px 0px 0px;
+}
+.menu__link {
+  font-family: "RaleWay", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000;
+  letter-spacing: 1px;
+}
+.menu__link:hover {
+  text-decoration: underline;
+}
+.menu__icon {
+  margin: 0px 0px 0px 30px;
+}
+
+.button {
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  color: #fcfdfe;
+  padding: 13px 30px;
+  border-radius: 5px;
+  background: #EC5863;
+  -webkit-transition: background ease 0.5s;
+  transition: background ease 0.5s;
+}
+.button:hover {
+  background: #C74A52;
+}
+.button_blue {
+  background: #4285f4;
+}
+.button_blue:hover {
+  background: #699EF4;
+}
+
+.icon-menu {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .header__container {
+    min-height: 90px;
+  }
+  .header__button {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 170px;
+            flex: 0 0 170px;
+    font-size: 10px;
+  }
+  .header .button {
+    padding: 14px 30px;
+  }
+  .header .menu__item {
+    margin: 0px 22.5px 0px 0px;
+  }
+}
+@media (max-width: 767.98px) {
+  .icon-menu {
+    position: relative;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30px;
+            flex: 0 0 30px;
+    height: 22px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0px 0px 0px 30px;
+  }
+  .icon-menu:after, .icon-menu:before {
+    content: "";
+    background: #000;
+    height: 3px;
+  }
+  .icon-menu span {
+    background: #000;
+    height: 3px;
+  }
+
+  .menu__icon_close {
+    display: none;
+  }
+  .menu__icon_close span {
+    background: #fff;
+  }
+  .menu__icon_close:after, .menu__icon_close:before {
+    background: #fff;
+  }
+
+  .menu__body {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    padding: 130px 15px;
+    -webkit-transition: left ease 0.5s;
+    transition: left ease 0.5s;
+  }
+  .menu__body:target {
+    left: 100%;
+  }
+  .menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu .menu__item {
+    margin: 25px 0px 0px 0px;
+  }
+  .menu .menu__item:first-child {
+    margin-top: 0;
+  }
+  .menu__link {
+    font-size: 25px;
+  }
+  .menu__link {
+    color: #fff;
+  }
+
+  .header:target .menu__body {
+    left: 0;
+    overflow: auto;
+  }
+  .header:target .menu__icon_open {
+    display: none;
+  }
+  .header:target .menu__icon_close {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header__logo {
+    z-index: 2;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 45px;
+            flex: 0 0 45px;
+    overflow: hidden;
+  }
+  .header__button {
+    z-index: 2;
+  }
+}
+@media (max-width: 280px) {
+  .header .button {
+    padding: 12px 15px;
+  }
+}
